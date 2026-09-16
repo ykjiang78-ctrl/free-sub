@@ -4,31 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇱 IL 01 - xiaohe
+- name: 🇧🇷 BR 01 - xiaohe
   type: vless
-  server: 104.24.3.153
+  server: 104.64.59.22
   port: 443
-  uuid: 887f0c24-8b2e-40ce-8df5-27b4cb06ce81
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: usER-svc-Ca3845-EdG.PlAtfOrm-37528A.woRkErs.Dev
+  servername: kkkk-8oc.pages.dev
   network: ws
   ws-opts:
-    path: /?proxyip=185.239.48.237&ed=2560
+    path: /?ed=2048
     headers:
-      Host: usER-Svc-ca3845-Edg.PlAtforM-37528a.WoRkERS.deV
+      Host: kkkk-8oc.pages.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇮🇱 IL 01 - xiaohe
+  - 🇧🇷 BR 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇱 IL 01 - xiaohe
+  - 🇧🇷 BR 01 - xiaohe
 rules:
 - MATCH,PROXIES
