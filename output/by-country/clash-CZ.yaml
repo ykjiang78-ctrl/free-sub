@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇱🇻 LV 01 - xiaohe
+- name: 🇨🇿 CZ 01 - xiaohe
   type: vless
-  server: atomic-prase23893.my-vm.work
-  port: 8088
-  uuid: tmp_user
+  server: 185.170.166.30
+  port: 8880
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   udp: true
   tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /api
+    path: /
     headers:
-      Host: queuev4.vk.com
+      Host: vms.lifetime04.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇱🇻 LV 01 - xiaohe
+  - 🇨🇿 CZ 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇱🇻 LV 01 - xiaohe
+  - 🇨🇿 CZ 01 - xiaohe
 rules:
 - MATCH,PROXIES
