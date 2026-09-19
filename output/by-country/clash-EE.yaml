@@ -6,12 +6,18 @@ log-level: info
 proxies:
 - name: 🇪🇪 EE 01 - xiaohe
   type: vless
-  server: 212.87.190.124
-  port: 3
-  uuid: 6049e972-419e-43bc-932c-4032be6d1b5b
+  server: 104.24.31.89
+  port: 443
+  uuid: aebe5a70-0ca3-46ce-8208-8b5bab1346ce
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: rAyAn-007.nAsTaRaN.DpDnS.OrG
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: rayan-007.nastaran.dpdns.org
 - name: 🇪🇪 EE 02 - xiaohe
   type: vless
   server: 94.183.170.135
