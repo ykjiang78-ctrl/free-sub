@@ -5,33 +5,35 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 - xiaohe
-  type: vless
-  server: 172.67.151.109
-  port: 443
-  uuid: 50414e45-4c5f-5a45-5553-635698a6bb9c
+  type: vmess
+  server: 78.135.77.91
+  port: 25020
+  uuid: Nitro_Skybot@
+  alterId: 0
+  cipher: auto
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: jdzit4e4urks.xwzohsebujps.workers.dev
   network: ws
   ws-opts:
-    path: /stream/PANEL_ZEUS/635698a6bb9c/loc-0
+    path: /
     headers:
-      Host: jdzit4e4urks.xwzohsebujps.workers.dev
+      Host: ''
 - name: 🇹🇷 土耳其 (Turkey) 02 - xiaohe
-  type: vless
-  server: 172.67.134.170
-  port: 443
-  uuid: 50414e45-4c5f-5a45-5553-635698a6bb9c
+  type: vmess
+  server: 78.135.77.91
+  port: 25020
+  uuid: Nitro_Skybot@
+  alterId: 0
+  cipher: auto
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: jdzit4e4urks.xwzohsebujps.workers.dev
   network: ws
   ws-opts:
-    path: /stream/PANEL_ZEUS/635698a6bb9c/loc-0
+    path: ''
     headers:
-      Host: jdzit4e4urks.xwzohsebujps.workers.dev
+      Host: ''
 proxy-groups:
 - name: PROXIES
   type: select
