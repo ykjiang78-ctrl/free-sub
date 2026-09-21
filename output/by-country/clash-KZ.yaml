@@ -6,20 +6,6 @@ log-level: info
 proxies:
 - name: 🇰🇿 KZ 01 - xiaohe
   type: vless
-  server: 31.43.179.8
-  port: 443
-  uuid: b2593749-691c-428c-9481-14979cba3446
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: xi.tbv.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /proxyip=us.xiabibi.cf
-    headers:
-      Host: xi.tbv.ccwu.cc
-- name: 🇰🇿 KZ 02 - xiaohe
-  type: vless
   server: 31.43.179.20
   port: 443
   uuid: b2593749-691c-428c-9481-14979cba3446
@@ -30,6 +16,20 @@ proxies:
   network: ws
   ws-opts:
     path: /
+    headers:
+      Host: xi.tbv.ccwu.cc
+- name: 🇰🇿 KZ 02 - xiaohe
+  type: vless
+  server: 31.43.179.8
+  port: 443
+  uuid: b2593749-691c-428c-9481-14979cba3446
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: xi.tbv.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=us.xiabibi.cf
     headers:
       Host: xi.tbv.ccwu.cc
 - name: 🇰🇿 KZ 03 - xiaohe
@@ -43,12 +43,12 @@ proxies:
   servername: xi.tbv.ccwu.cc
   network: ws
   ws-opts:
-    path: /
+    path: /proxyip=us.xiabibi.cf
     headers:
       Host: xi.tbv.ccwu.cc
 - name: 🇰🇿 KZ 04 - xiaohe
   type: vless
-  server: 31.43.179.25
+  server: 31.43.179.200
   port: 443
   uuid: b2593749-691c-428c-9481-14979cba3446
   udp: true
@@ -57,12 +57,12 @@ proxies:
   servername: xi.tbv.ccwu.cc
   network: ws
   ws-opts:
-    path: /
+    path: /proxyip=us.xiabibi.cf
     headers:
       Host: xi.tbv.ccwu.cc
 - name: 🇰🇿 KZ 05 - xiaohe
   type: vless
-  server: 31.43.179.200
+  server: kz3.zuoai.cf
   port: 443
   uuid: b2593749-691c-428c-9481-14979cba3446
   udp: true
@@ -85,24 +85,10 @@ proxies:
   servername: xi.tbv.ccwu.cc
   network: ws
   ws-opts:
-    path: /proxyip=us.xiabibi.cf
+    path: /
     headers:
       Host: xi.tbv.ccwu.cc
 - name: 🇰🇿 KZ 07 - xiaohe
-  type: vless
-  server: 31.43.179.137
-  port: 443
-  uuid: b2593749-691c-428c-9481-14979cba3446
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: xi.tbv.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /proxyip=us.xiabibi.cf
-    headers:
-      Host: xi.tbv.ccwu.cc
-- name: 🇰🇿 KZ 08 - xiaohe
   type: vless
   server: 31.43.179.200
   port: 443
@@ -116,9 +102,9 @@ proxies:
     path: /
     headers:
       Host: xi.tbv.ccwu.cc
-- name: 🇰🇿 KZ 09 - xiaohe
+- name: 🇰🇿 KZ 08 - xiaohe
   type: vless
-  server: 31.43.179.87
+  server: 31.43.179.137
   port: 443
   uuid: b2593749-691c-428c-9481-14979cba3446
   udp: true
@@ -130,9 +116,9 @@ proxies:
     path: /proxyip=us.xiabibi.cf
     headers:
       Host: xi.tbv.ccwu.cc
-- name: 🇰🇿 KZ 10 - xiaohe
+- name: 🇰🇿 KZ 09 - xiaohe
   type: vless
-  server: 31.43.179.109
+  server: 31.43.179.87
   port: 443
   uuid: b2593749-691c-428c-9481-14979cba3446
   udp: true
@@ -141,7 +127,7 @@ proxies:
   servername: xi.tbv.ccwu.cc
   network: ws
   ws-opts:
-    path: /proxyip=us.xiabibi.cf
+    path: /
     headers:
       Host: xi.tbv.ccwu.cc
 proxy-groups:
@@ -158,7 +144,6 @@ proxy-groups:
   - 🇰🇿 KZ 07 - xiaohe
   - 🇰🇿 KZ 08 - xiaohe
   - 🇰🇿 KZ 09 - xiaohe
-  - 🇰🇿 KZ 10 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -173,6 +158,5 @@ proxy-groups:
   - 🇰🇿 KZ 07 - xiaohe
   - 🇰🇿 KZ 08 - xiaohe
   - 🇰🇿 KZ 09 - xiaohe
-  - 🇰🇿 KZ 10 - xiaohe
 rules:
 - MATCH,PROXIES

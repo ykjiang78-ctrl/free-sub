@@ -18,17 +18,33 @@ proxies:
     path: /fp=chrome
     headers:
       Host: shuma.ccwu.cc
+- name: 🇧🇷 BR 02 - xiaohe
+  type: vless
+  server: 31.59.121.156
+  port: 2053
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: cdn8848.776676.xyz
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: cdn8848.776676.xyz
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇧🇷 BR 01 - xiaohe
+  - 🇧🇷 BR 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇧🇷 BR 01 - xiaohe
+  - 🇧🇷 BR 02 - xiaohe
 rules:
 - MATCH,PROXIES
