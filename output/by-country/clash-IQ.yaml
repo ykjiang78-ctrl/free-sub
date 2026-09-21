@@ -6,12 +6,18 @@ log-level: info
 proxies:
 - name: 🇮🇶 IQ 01 - xiaohe
   type: vless
-  server: 81.90.25.152
-  port: 34302
-  uuid: e9a7f2c2-51bd-4a81-de35-26b369e2585b
+  server: 188.114.97.1
+  port: 2053
+  uuid: 0b3e7958-e5c4-498f-ab21-b49686f95d2d
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: bold-term-4edd.mbigspot.workers.dev
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: bold-term-4edd.mbigspot.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
