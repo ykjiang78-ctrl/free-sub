@@ -27,7 +27,7 @@ proxies:
   reality-opts:
     public-key: 3ekBKAuIIAOjtkKJ0T-qpC7uJsqsY2fVLRB6C70A5hw
   servername: www.cloudflare.com
-  client-fingerprint: ios
+  client-fingerprint: chrome
 - name: 🇨🇱 CL 03 - xiaohe
   type: vless
   server: platform118.golnamakcert.top

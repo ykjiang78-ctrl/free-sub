@@ -6,58 +6,32 @@ log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
   type: vless
-  server: lucky-lab-ac6d.caveyi8071.workers.dev
-  port: 443
-  uuid: 8a36be1d-7c78-4885-8a1f-bedf5ba7db1c
+  server: 5.129.238.144
+  port: 8443
+  uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: lucky-lab-ac6d.caveyi8071.workers.dev
+  servername: xinnusvpn.duckdns.org
   network: ws
   ws-opts:
-    path: /
+    path: /wsnl
     headers:
-      Host: lucky-lab-ac6d.caveyi8071.workers.dev
+      Host: xinnusvpn.duckdns.org
 - name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
   type: vless
-  server: 104.21.70.121
-  port: 2087
-  uuid: 5a0028f9-c656-cec9-4b61-54678477a408
+  server: 46.8.200.91
+  port: 443
+  uuid: b8201bab-fa6c-4f6e-b289-b5da660c6f69
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: green-credit-7e7b.vpnfreev2rayconfig-sale1.workers.dev
+  servername: cf3.rumedia-cdn.com
   network: ws
   ws-opts:
-    path: '%2F'
+    path: /cdn/v3/live
     headers:
-      Host: green-credit-7e7b.vpnfreev2rayconfig-sale1.workers.dev
-- name: 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
-  type: vless
-  server: 172.64.53.55
-  port: 8080
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
-  type: vless
-  server: 104.21.70.21
-  port: 8080
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+      Host: cf3.rumedia-cdn.com
 proxy-groups:
 - name: PROXIES
   type: select
@@ -65,8 +39,6 @@ proxy-groups:
   - AUTO
   - 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -74,7 +46,5 @@ proxy-groups:
   proxies:
   - 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
 rules:
 - MATCH,PROXIES
