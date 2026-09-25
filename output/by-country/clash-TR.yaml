@@ -5,12 +5,15 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 - xiaohe
-  type: ss
-  server: 192.209.62.92
-  port: 211
-  cipher: chacha20-ietf-poly1305
-  password: 6B-X_OuMsGxWj0AhJ9aMdpht_hQfYeNz
+  type: vmess
+  server: 103.215.218.158
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
   udp: true
+  tls: false
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
