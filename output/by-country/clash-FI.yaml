@@ -6,29 +6,39 @@ log-level: info
 proxies:
 - name: 🇫🇮 FI 01 - xiaohe
   type: vless
-  server: me1.movieseryalirani.ir
-  port: 443
-  uuid: 63aaea7f-2847-4f41-afab-0836b1cf79d9
+  server: 95.216.27.15
+  port: 2053
+  uuid: 1c81f6d3-5771-4c5d-9fdd-1655eff50634
   udp: true
   tls: true
   skip-cert-verify: true
   reality-opts:
-    public-key: CxRZ7oJWwR7okmOoqEEbVYCSfTaBlNA6ycf_UniyeEk
-  servername: matrix-client.matrix.org
-  client-fingerprint: firefox
+    public-key: 4nfogj5mHqNowtSn_2sXS3xTX8vcH75rFEU2BWvyekM
+  servername: www.google.com
+  client-fingerprint: chrome
 - name: 🇫🇮 FI 02 - xiaohe
   type: vless
-  server: 185.79.138.71
-  port: 448
-  uuid: 0b0915d7-6800-4580-a44b-77d84f105e6a
+  server: 95.216.27.15
+  port: 2053
+  uuid: 1c81f6d3-5771-4c5d-9fdd-1655eff50634
   udp: true
   tls: true
   skip-cert-verify: true
   reality-opts:
-    public-key: CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8
-  servername: www.samsung.com
-  client-fingerprint: chrome
+    public-key: 4nfogj5mHqNowtSn_2sXS3xTX8vcH75rFEU2BWvyekM
+  servername: www.google.com
+  client-fingerprint: random
 - name: 🇫🇮 FI 03 - xiaohe
+  type: vmess
+  server: me6.movieseryalirani.ir
+  port: 57361
+  uuid: ed815caa-bff1-4419-8c61-1d108eabaf1f
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: 🇫🇮 FI 04 - xiaohe
   type: vless
   server: 185.79.138.71
   port: 448
@@ -40,6 +50,54 @@ proxies:
     public-key: CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8
   servername: www.samsung.com
   client-fingerprint: chrome
+- name: 🇫🇮 FI 05 - xiaohe
+  type: vless
+  server: 185.79.138.71
+  port: 448
+  uuid: 0b0915d7-6800-4580-a44b-77d84f105e6a
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8
+  servername: www.samsung.com
+  client-fingerprint: chrome
+- name: 🇫🇮 FI 06 - xiaohe
+  type: vless
+  server: 185.79.138.71
+  port: 448
+  uuid: 0b0915d7-6800-4580-a44b-77d84f105e6a
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8
+  servername: www.samsung.com
+  client-fingerprint: chrome
+- name: 🇫🇮 FI 07 - xiaohe
+  type: vless
+  server: 185.79.138.71
+  port: 448
+  uuid: 0b0915d7-6800-4580-a44b-77d84f105e6a
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8
+  servername: www.samsung.com
+  client-fingerprint: chrome
+- name: 🇫🇮 FI 08 - xiaohe
+  type: vless
+  server: 185.79.138.71
+  port: 448
+  uuid: 0b0915d7-6800-4580-a44b-77d84f105e6a
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8
+  servername: www.samsung.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -48,6 +106,11 @@ proxy-groups:
   - 🇫🇮 FI 01 - xiaohe
   - 🇫🇮 FI 02 - xiaohe
   - 🇫🇮 FI 03 - xiaohe
+  - 🇫🇮 FI 04 - xiaohe
+  - 🇫🇮 FI 05 - xiaohe
+  - 🇫🇮 FI 06 - xiaohe
+  - 🇫🇮 FI 07 - xiaohe
+  - 🇫🇮 FI 08 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -56,5 +119,10 @@ proxy-groups:
   - 🇫🇮 FI 01 - xiaohe
   - 🇫🇮 FI 02 - xiaohe
   - 🇫🇮 FI 03 - xiaohe
+  - 🇫🇮 FI 04 - xiaohe
+  - 🇫🇮 FI 05 - xiaohe
+  - 🇫🇮 FI 06 - xiaohe
+  - 🇫🇮 FI 07 - xiaohe
+  - 🇫🇮 FI 08 - xiaohe
 rules:
 - MATCH,PROXIES
