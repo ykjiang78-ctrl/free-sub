@@ -6,7 +6,7 @@ log-level: info
 proxies:
 - name: 🇮🇪 IE 01 - xiaohe
   type: vless
-  server: 45.141.234.138
+  server: 188.114.97.6
   port: 443
   uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
   udp: true
@@ -15,10 +15,24 @@ proxies:
   servername: edgetunnel-4uw.pages.dev
   network: ws
   ws-opts:
-    path: /
+    path: /fp=chrome
     headers:
       Host: edgetunnel-4uw.pages.dev
 - name: 🇮🇪 IE 02 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: edgetunnel-4uw.pages.dev
+  network: ws
+  ws-opts:
+    path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+    headers:
+      Host: edgetunnel-4uw.pages.dev
+- name: 🇮🇪 IE 03 - xiaohe
   type: vless
   server: 45.141.234.138
   port: 443
@@ -39,6 +53,7 @@ proxy-groups:
   - AUTO
   - 🇮🇪 IE 01 - xiaohe
   - 🇮🇪 IE 02 - xiaohe
+  - 🇮🇪 IE 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -46,5 +61,6 @@ proxy-groups:
   proxies:
   - 🇮🇪 IE 01 - xiaohe
   - 🇮🇪 IE 02 - xiaohe
+  - 🇮🇪 IE 03 - xiaohe
 rules:
 - MATCH,PROXIES

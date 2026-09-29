@@ -20,30 +20,34 @@ proxies:
       Host: hk.152568.xyz
 - name: 🇭🇰 中国香港 (Hong Kong) 02 - xiaohe
   type: vless
-  server: 47.238.210.5
-  port: 13779
-  uuid: 928e6cce-8ced-4243-9a48-a6642edd09b0
+  server: 141.11.90.160
+  port: 443
+  uuid: 9e3132b8-b595-444a-833a-2de44789f9d7
   udp: true
   tls: true
   skip-cert-verify: true
-  reality-opts:
-    public-key: llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg
-  servername: tesla.com
-  client-fingerprint: qq
-- name: 🇭🇰 中国香港 (Hong Kong) 03 - xiaohe
-  type: vless
-  server: 85.149.211.28
-  port: 8443
-  uuid: 0250424c-ae75-4b6b-890f-3fe26fae36c3
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: hk.152568.xyz
+  servername: shephe.dpdns.org
   network: ws
   ws-opts:
-    path: /cdn/packages/runtime-core.tar.gz
+    path: /fp=chrome
     headers:
-      Host: hk.152568.xyz
+      Host: shephe.dpdns.org
+- name: 🇭🇰 中国香港 (Hong Kong) 03 - xiaohe
+  type: vmess
+  server: 194.99.79.26
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ''
+  network: ws
+  ws-opts:
+    path: /linkvws
+    headers:
+      Host: ''
 - name: 🇭🇰 中国香港 (Hong Kong) 04 - xiaohe
   type: vmess
   server: 194.99.79.26
@@ -62,33 +66,46 @@ proxies:
       Host: aksai.org
 - name: 🇭🇰 中国香港 (Hong Kong) 05 - xiaohe
   type: vless
-  server: champion.xn--kivt58h.lol
-  port: 80
-  uuid: ed2864f9-37b3-4222-8c54-014aedc400a2
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ak.mcdonaldshamburgergoodgoodgood.xyz
-- name: 🇭🇰 中国香港 (Hong Kong) 06 - xiaohe
-  type: vmess
-  server: 194.99.79.26
-  port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
+  server: 207.57.135.199
+  port: 8443
+  uuid: 0250424c-ae75-4b6b-890f-3fe26fae36c3
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: ''
+  servername: hk.152568.xyz
   network: ws
   ws-opts:
-    path: /linkvws
+    path: /cdn/packages/runtime-core.tar.gz
     headers:
-      Host: ''
+      Host: hk.152568.xyz
+- name: 🇭🇰 中国香港 (Hong Kong) 06 - xiaohe
+  type: vless
+  server: 85.149.211.28
+  port: 8443
+  uuid: 0250424c-ae75-4b6b-890f-3fe26fae36c3
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: hk.152568.xyz
+  network: ws
+  ws-opts:
+    path: /cdn/packages/runtime-core.tar.gz
+    headers:
+      Host: hk.152568.xyz
+- name: 🇭🇰 中国香港 (Hong Kong) 07 - xiaohe
+  type: vless
+  server: 103.71.23.247
+  port: 443
+  uuid: 0250424c-ae75-4b6b-890f-3fe26fae36c3
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: hk.152568.xyz
+  network: ws
+  ws-opts:
+    path: /cdn/packages/runtime-core.tar.gz
+    headers:
+      Host: hk.152568.xyz
 proxy-groups:
 - name: PROXIES
   type: select
@@ -100,6 +117,7 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 04 - xiaohe
   - 🇭🇰 中国香港 (Hong Kong) 05 - xiaohe
   - 🇭🇰 中国香港 (Hong Kong) 06 - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 07 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -111,5 +129,6 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 04 - xiaohe
   - 🇭🇰 中国香港 (Hong Kong) 05 - xiaohe
   - 🇭🇰 中国香港 (Hong Kong) 06 - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 07 - xiaohe
 rules:
 - MATCH,PROXIES
