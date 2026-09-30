@@ -15,8 +15,20 @@ proxies:
   reality-opts:
     public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
   servername: www.apple.com
-  client-fingerprint: random
+  client-fingerprint: chrome
 - name: 🇮🇳 印度 (India) 02 - xiaohe
+  type: vless
+  server: 194.61.31.126
+  port: 2053
+  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
+  servername: www.apple.com
+  client-fingerprint: random
+- name: 🇮🇳 印度 (India) 03 - xiaohe
   type: vless
   server: 20.219.46.208
   port: 8443
@@ -30,7 +42,32 @@ proxies:
     path: /
     headers:
       Host: shephe.dpdns.org
-- name: 🇮🇳 印度 (India) 03 - xiaohe
+- name: 🇮🇳 印度 (India) 04 - xiaohe
+  type: vless
+  server: 194.61.31.126
+  port: 2053
+  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
+  servername: www.apple.com
+  client-fingerprint: firefox
+- name: 🇮🇳 印度 (India) 05 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 2086
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
+- name: 🇮🇳 印度 (India) 06 - xiaohe
   type: vless
   server: 194.61.31.126
   port: 2053
@@ -50,6 +87,9 @@ proxy-groups:
   - 🇮🇳 印度 (India) 01 - xiaohe
   - 🇮🇳 印度 (India) 02 - xiaohe
   - 🇮🇳 印度 (India) 03 - xiaohe
+  - 🇮🇳 印度 (India) 04 - xiaohe
+  - 🇮🇳 印度 (India) 05 - xiaohe
+  - 🇮🇳 印度 (India) 06 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -58,5 +98,8 @@ proxy-groups:
   - 🇮🇳 印度 (India) 01 - xiaohe
   - 🇮🇳 印度 (India) 02 - xiaohe
   - 🇮🇳 印度 (India) 03 - xiaohe
+  - 🇮🇳 印度 (India) 04 - xiaohe
+  - 🇮🇳 印度 (India) 05 - xiaohe
+  - 🇮🇳 印度 (India) 06 - xiaohe
 rules:
 - MATCH,PROXIES
