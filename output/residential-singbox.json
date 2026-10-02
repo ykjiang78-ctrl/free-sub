@@ -6,8 +6,8 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe",
-        "🇺🇸 美国 (United States) 02 (家宽) - xiaohe",
+        "🇺🇸 美国 (United States) 01 (家宽) - xiaohe",
+        "🇰🇷 韩国 (South Korea) 02 (家宽) - xiaohe",
         "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - xiaohe",
         "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - xiaohe",
         "🇺🇸 美国 (United States) 05 (家宽) - xiaohe"
@@ -17,8 +17,8 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe",
-        "🇺🇸 美国 (United States) 02 (家宽) - xiaohe",
+        "🇺🇸 美国 (United States) 01 (家宽) - xiaohe",
+        "🇰🇷 韩国 (South Korea) 02 (家宽) - xiaohe",
         "🇹🇼 中国台湾 (Taiwan) 03 (家宽) - xiaohe",
         "🇹🇼 中国台湾 (Taiwan) 04 (家宽) - xiaohe",
         "🇺🇸 美国 (United States) 05 (家宽) - xiaohe"
