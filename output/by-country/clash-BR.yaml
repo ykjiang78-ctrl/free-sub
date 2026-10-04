@@ -14,24 +14,28 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
+  servername: aksai.org
+  network: ws
+  ws-opts:
+    path: /linkvws
+    headers:
+      Host: aksai.org
+- name: 🇧🇷 BR 02 - xiaohe
+  type: vmess
+  server: aksai.org
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
   servername: ''
   network: ws
   ws-opts:
     path: /linkvws
     headers:
       Host: ''
-- name: 🇧🇷 BR 02 - xiaohe
-  type: vless
-  server: 35.247.243.231
-  port: 443
-  uuid: 5e517b94-e207-47ee-be3c-3020a57594e8
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: pCImwRkTjx8OIUiu1WFelZQFt1p3Q0lUoPbvjVq8GTs
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
