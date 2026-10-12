@@ -6,7 +6,7 @@ log-level: info
 proxies:
 - name: 🇲🇾 MY 01 - xiaohe
   type: vless
-  server: 45.195.69.230
+  server: platform101.golnamakcert.top
   port: 80
   uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
   udp: true
@@ -14,9 +14,9 @@ proxies:
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /platform103
+    path: /platform101
     headers:
-      Host: platform103.halalkhor.info
+      Host: platform101.halalkhor.info
 - name: 🇲🇾 MY 02 - xiaohe
   type: vless
   server: 216.173.67.59
@@ -46,32 +46,6 @@ proxies:
       Host: platform102.halalkhor.info
 - name: 🇲🇾 MY 04 - xiaohe
   type: vless
-  server: platform117.golnamakcert.top
-  port: 80
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /platform117
-    headers:
-      Host: platform117.halalkhor.info
-- name: 🇲🇾 MY 05 - xiaohe
-  type: vless
-  server: platform101.golnamakcert.top
-  port: 80
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /platform101
-    headers:
-      Host: platform101.halalkhor.info
-- name: 🇲🇾 MY 06 - xiaohe
-  type: vless
   server: 216.173.67.59
   port: 443
   uuid: d342d11e-d224-4463-b982-532309285094
@@ -84,32 +58,6 @@ proxies:
     path: /fp=chrome
     headers:
       Host: ccc.010304.xyz
-- name: 🇲🇾 MY 07 - xiaohe
-  type: vless
-  server: platform103.golnamakcert.top
-  port: 80
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /platform103
-    headers:
-      Host: platform103.halalkhor.info
-- name: 🇲🇾 MY 08 - xiaohe
-  type: vless
-  server: platform118.golnamakcert.top
-  port: 80
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /platform118
-    headers:
-      Host: platform118.halalkhor.info
 proxy-groups:
 - name: PROXIES
   type: select
@@ -119,10 +67,6 @@ proxy-groups:
   - 🇲🇾 MY 02 - xiaohe
   - 🇲🇾 MY 03 - xiaohe
   - 🇲🇾 MY 04 - xiaohe
-  - 🇲🇾 MY 05 - xiaohe
-  - 🇲🇾 MY 06 - xiaohe
-  - 🇲🇾 MY 07 - xiaohe
-  - 🇲🇾 MY 08 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -132,9 +76,5 @@ proxy-groups:
   - 🇲🇾 MY 02 - xiaohe
   - 🇲🇾 MY 03 - xiaohe
   - 🇲🇾 MY 04 - xiaohe
-  - 🇲🇾 MY 05 - xiaohe
-  - 🇲🇾 MY 06 - xiaohe
-  - 🇲🇾 MY 07 - xiaohe
-  - 🇲🇾 MY 08 - xiaohe
 rules:
 - MATCH,PROXIES
