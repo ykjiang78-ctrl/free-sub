@@ -5,12 +5,14 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇭 CH 01 - xiaohe
-  type: ss
-  server: 132.243.175.144
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
+  type: vless
+  server: 138.124.96.88
+  port: 41826
+  uuid: 2eb3f6a0-df6e-49b6-994c-177acdd50a97
   udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: sweden.homyak.app
 proxy-groups:
 - name: PROXIES
   type: select
