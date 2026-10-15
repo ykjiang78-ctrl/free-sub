@@ -24,12 +24,13 @@ proxies:
   servername: 2.26.225.89
 - name: 🇵🇱 PL 03 - xiaohe
   type: vless
-  server: test.keoplentuio.xyz
-  port: 2053
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
+  server: 2.26.225.89
+  port: 8443
+  uuid: 51a1fd52-fd88-4905-a976-35e44be28e4b
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: pl.flen-vpn.xyz
 - name: 🇵🇱 PL 04 - xiaohe
   type: vless
   server: 2.26.225.89
