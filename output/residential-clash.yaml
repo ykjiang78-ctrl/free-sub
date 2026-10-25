@@ -58,6 +58,20 @@ proxies:
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
     headers:
       Host: 103.148.73.173
+- name: 🇮🇳 印度 (India) 05 (家宽) - xiaohe
+  type: vless
+  server: 122.176.216.52
+  port: 443
+  uuid: 16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: app-6ada5023.deploy.meerasolution.com
+  network: ws
+  ws-opts:
+    path: /ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
+    headers:
+      Host: app-6ada5023.deploy.meerasolution.com
 proxy-groups:
 - name: PROXIES
   type: select
@@ -67,6 +81,7 @@ proxy-groups:
   - 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - xiaohe
   - 🇭🇰 中国香港 (Hong Kong) 03 (家宽) - xiaohe
   - 🇭🇰 中国香港 (Hong Kong) 04 (家宽) - xiaohe
+  - 🇮🇳 印度 (India) 05 (家宽) - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -76,5 +91,6 @@ proxy-groups:
   - 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - xiaohe
   - 🇭🇰 中国香港 (Hong Kong) 03 (家宽) - xiaohe
   - 🇭🇰 中国香港 (Hong Kong) 04 (家宽) - xiaohe
+  - 🇮🇳 印度 (India) 05 (家宽) - xiaohe
 rules:
 - MATCH,PROXIES
