@@ -29,7 +29,7 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: free.nadun.store
+      Host: Free.nadun.store
 - name: 🇱🇰 LK 03 - xiaohe
   type: vless
   server: 170.114.46.6
@@ -81,7 +81,7 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: Free.nadun.store
+      Host: free.nadun.store
 proxy-groups:
 - name: PROXIES
   type: select
