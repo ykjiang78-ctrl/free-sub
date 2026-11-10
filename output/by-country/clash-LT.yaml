@@ -6,7 +6,7 @@ log-level: info
 proxies:
 - name: 🇱🇹 LT 01 - xiaohe
   type: vless
-  server: germany3.banovano.space
+  server: 45.81.252.143
   port: 2053
   uuid: 53555197-bf0a-49e6-bea1-211fcfc1d962
   udp: true

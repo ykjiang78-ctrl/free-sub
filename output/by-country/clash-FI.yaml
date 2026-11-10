@@ -5,28 +5,33 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 FI 01 - xiaohe
-  type: vmess
-  server: 65.108.240.210
-  port: 39018
-  uuid: 77fb7a80-4724-4e33-9558-4f20c1634c5a
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: 🇫🇮 FI 02 - xiaohe
   type: vless
-  server: 45.144.234.157
-  port: 14430
-  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
+  server: 138.124.49.108
+  port: 8443
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: fs.qicai99.com
   network: ws
   ws-opts:
-    path: /vless
+    path: /fp=chrome
     headers:
-      Host: 45.144.234.157
+      Host: fs.qicai99.com
+- name: 🇫🇮 FI 02 - xiaohe
+  type: vless
+  server: 109.120.134.181
+  port: 443
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: fs.qicai99.com
+  network: ws
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: fs.qicai99.com
 - name: 🇫🇮 FI 03 - xiaohe
   type: vless
   server: 45.144.234.157
@@ -81,6 +86,19 @@ proxies:
     path: /574ck-finland
     headers:
       Host: nl2.574ck.xyz
+- name: 🇫🇮 FI 07 - xiaohe
+  type: vless
+  server: 45.144.234.157
+  port: 14430
+  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 45.144.234.157
 proxy-groups:
 - name: PROXIES
   type: select
@@ -92,6 +110,7 @@ proxy-groups:
   - 🇫🇮 FI 04 - xiaohe
   - 🇫🇮 FI 05 - xiaohe
   - 🇫🇮 FI 06 - xiaohe
+  - 🇫🇮 FI 07 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -103,5 +122,6 @@ proxy-groups:
   - 🇫🇮 FI 04 - xiaohe
   - 🇫🇮 FI 05 - xiaohe
   - 🇫🇮 FI 06 - xiaohe
+  - 🇫🇮 FI 07 - xiaohe
 rules:
 - MATCH,PROXIES
