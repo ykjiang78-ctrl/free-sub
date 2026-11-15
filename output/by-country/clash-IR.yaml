@@ -6,6 +6,37 @@ log-level: info
 proxies:
 - name: 🇮🇷 IR 01 - xiaohe
   type: vless
+  server: base.hosamobenl.co.uk
+  port: 443
+  uuid: 667016ca-f02e-4b5f-bfc3-3d8ed81e9bec
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: base.hosamobenl.co.uk
+- name: 🇮🇷 IR 02 - xiaohe
+  type: vless
+  server: base.hosamobenl.co.uk
+  port: 443
+  uuid: 667016ca-f02e-4b5f-bfc3-3d8ed81e9bec
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: base.hosamobenl.co.uk
+- name: 🇮🇷 IR 03 - xiaohe
+  type: vless
+  server: 167.82.64.46
+  port: 80
+  uuid: 3c8017c8-0997-4c57-a3a4-c8c101a2a3f8
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: ws/?ed=2048/@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr/?2048
+    headers:
+      Host: rb24.ir
+- name: 🇮🇷 IR 04 - xiaohe
+  type: vless
   server: 87.248.149.50
   port: 443
   uuid: 667016ca-f02e-4b5f-bfc3-3d8ed81e9bec
@@ -19,11 +50,17 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇮🇷 IR 01 - xiaohe
+  - 🇮🇷 IR 02 - xiaohe
+  - 🇮🇷 IR 03 - xiaohe
+  - 🇮🇷 IR 04 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇮🇷 IR 01 - xiaohe
+  - 🇮🇷 IR 02 - xiaohe
+  - 🇮🇷 IR 03 - xiaohe
+  - 🇮🇷 IR 04 - xiaohe
 rules:
 - MATCH,PROXIES
