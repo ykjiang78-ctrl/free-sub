@@ -4,31 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇵🇱 PL 01 - xiaohe
+- name: 🇦🇺 澳大利亚 (Australia) 01 - xiaohe
   type: vless
-  server: 144.31.3.89
+  server: 13.211.155.89
   port: 443
-  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
+  uuid: e3a1c7f2-9b4d-4e8a-a6c5-1f2d3b4a5e6f
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: clearingmatch.melodramaonline.net
+  servername: www.microsoft.com
   network: ws
   ws-opts:
-    path: /media/ws/
+    path: /7b9977b2af9da85fa86adc065c362efe
     headers:
-      Host: 144.31.3.89
+      Host: 13.211.155.89
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇵🇱 PL 01 - xiaohe
+  - 🇦🇺 澳大利亚 (Australia) 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇵🇱 PL 01 - xiaohe
+  - 🇦🇺 澳大利亚 (Australia) 01 - xiaohe
 rules:
 - MATCH,PROXIES
