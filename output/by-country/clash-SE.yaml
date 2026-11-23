@@ -6,19 +6,44 @@ log-level: info
 proxies:
 - name: 🇸🇪 SE 01 - xiaohe
   type: vless
-  server: 92.223.84.254
+  server: 77.232.143.142
   port: 443
-  uuid: 63242a2a-7bdb-4775-bc3f-65c2f260f224
+  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: subgift.gcorecdn.com
+  servername: volumestyle.komediyatorg.net
   network: ws
   ws-opts:
-    path: /t.me-SubGift
+    path: /media/ws/
     headers:
-      Host: subgift.gcorecdn.com
+      Host: 77.232.143.142
 - name: 🇸🇪 SE 02 - xiaohe
+  type: vless
+  server: 77.232.143.142
+  port: 443
+  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: volumestyle.komediyatorg.net
+  network: ws
+  ws-opts:
+    path: /media/ws/
+    headers:
+      Host: 77.232.143.142
+- name: 🇸🇪 SE 03 - xiaohe
+  type: vmess
+  server: 62.93.166.184
+  port: 1270
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: xmfhlpy.com
+- name: 🇸🇪 SE 04 - xiaohe
   type: vless
   server: 5.178.109.174
   port: 14430
@@ -31,52 +56,13 @@ proxies:
     path: /vless
     headers:
       Host: 5.178.109.174
-- name: 🇸🇪 SE 03 - xiaohe
-  type: vless
-  server: 77.232.143.142
-  port: 443
-  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: volumestyle.komediyatorg.net
-  network: ws
-  ws-opts:
-    path: /media/ws/
-    headers:
-      Host: 77.232.143.142
-- name: 🇸🇪 SE 04 - xiaohe
+- name: 🇸🇪 SE 05 - xiaohe
   type: ss
   server: 138.199.55.243
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: 🇸🇪 SE 05 - xiaohe
-  type: vmess
-  server: 62.93.166.184
-  port: 1270
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: xmfhlpy.com
-- name: 🇸🇪 SE 06 - xiaohe
-  type: vless
-  server: 77.232.143.142
-  port: 443
-  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: volumestyle.komediyatorg.net
-  network: ws
-  ws-opts:
-    path: /media/ws/
-    headers:
-      Host: 77.232.143.142
 proxy-groups:
 - name: PROXIES
   type: select
@@ -87,7 +73,6 @@ proxy-groups:
   - 🇸🇪 SE 03 - xiaohe
   - 🇸🇪 SE 04 - xiaohe
   - 🇸🇪 SE 05 - xiaohe
-  - 🇸🇪 SE 06 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -98,6 +83,5 @@ proxy-groups:
   - 🇸🇪 SE 03 - xiaohe
   - 🇸🇪 SE 04 - xiaohe
   - 🇸🇪 SE 05 - xiaohe
-  - 🇸🇪 SE 06 - xiaohe
 rules:
 - MATCH,PROXIES
