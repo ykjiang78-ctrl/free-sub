@@ -6,17 +6,7 @@ log-level: info
 proxies:
 - name: 🇹🇭 TH 01 - xiaohe
   type: vmess
-  server: 47.87.64.133
-  port: 18565
-  uuid: 853a251f-de85-40cc-84a6-ab8748c7258c
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: 🇹🇭 TH 02 - xiaohe
-  type: vmess
-  server: 47.81.36.173
+  server: 8.213.211.160
   port: 18565
   uuid: 853a251f-de85-40cc-84a6-ab8748c7258c
   alterId: 0
@@ -30,13 +20,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇹🇭 TH 01 - xiaohe
-  - 🇹🇭 TH 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇹🇭 TH 01 - xiaohe
-  - 🇹🇭 TH 02 - xiaohe
 rules:
 - MATCH,PROXIES
