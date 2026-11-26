@@ -6,22 +6,32 @@ log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 - xiaohe
   type: vless
-  server: turkey-ip1.mmdaqaorg.xyz
-  port: 50738
-  uuid: 56665684-5ac0-4ba9-9d49-8b258fb57974
+  server: 104.21.44.113
+  port: 443
+  uuid: 963A4918-A630-29DA-A873-093CDF8AD784
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: turkey-ip1.mmdaqaorg.xyz
+  servername: still-bar-5702.vpnetwork3567.workers.dev
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: still-bar-5702.vpnetwork3567.workers.dev
 - name: 🇹🇷 土耳其 (Turkey) 02 - xiaohe
   type: vless
-  server: 143.246.136.128
-  port: 50738
-  uuid: 56665684-5ac0-4ba9-9d49-8b258fb57974
+  server: 104.21.44.113
+  port: 443
+  uuid: 963A4918-A630-29DA-A873-093CDF8AD784
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: turkey-ip1.mmdaqaorg.xyz
+  servername: still-bar-5702.vpnetwork3567.workers.dev
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: still-bar-5702.vpnetwork3567.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
