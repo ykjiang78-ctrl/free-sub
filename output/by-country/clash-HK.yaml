@@ -6,21 +6,6 @@ log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01 - xiaohe
   type: vmess
-  server: 47.244.120.197
-  port: 44867
-  uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /arki
-    headers:
-      Host: 47.244.120.197
-- name: 🇭🇰 中国香港 (Hong Kong) 02 - xiaohe
-  type: vmess
   server: 47.86.90.31
   port: 443
   uuid: 234a8041-2b4d-44a3-a8d8-523cbfd58dc4
@@ -35,6 +20,13 @@ proxies:
     path: /ws-vmess
     headers:
       Host: bywxdhirqkjj8xaz.v.3dns.vip
+- name: 🇭🇰 中国香港 (Hong Kong) 02 - xiaohe
+  type: ss
+  server: waic.pro.main.sys-metric-report.com
+  port: 28014
+  cipher: chacha20-ietf-poly1305
+  password: abc62f00-95a8-4c2e-a85d-36a2cdc977da
+  udp: true
 - name: 🇭🇰 中国香港 (Hong Kong) 03 - xiaohe
   type: ss
   server: 213.176.92.148
