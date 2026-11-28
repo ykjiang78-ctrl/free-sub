@@ -4,27 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇭 TH 01 - xiaohe
-  type: vmess
-  server: 119.46.51.45
-  port: 37515
-  uuid: 9b76bc31-17a5-4454-934a-8d5fb602cd70
-  alterId: 0
-  cipher: auto
+- name: 🇱🇹 LT 01 - xiaohe
+  type: vless
+  server: 5.199.173.195
+  port: 443
+  uuid: bf14dc50-e9f2-49fd-8642-620446edeafb
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: v4-77j.pages.dev
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: v4-77j.pages.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇹🇭 TH 01 - xiaohe
+  - 🇱🇹 LT 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇭 TH 01 - xiaohe
+  - 🇱🇹 LT 01 - xiaohe
 rules:
 - MATCH,PROXIES
