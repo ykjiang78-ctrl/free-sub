@@ -12,17 +12,33 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
+- name: 🇻🇳 VN 02 - xiaohe
+  type: vless
+  server: 221.133.21.135
+  port: 8444
+  uuid: 2144e802-a64f-4261-af53-41309fee1d99
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: www.bing.com
+  network: ws
+  ws-opts:
+    path: /tk
+    headers:
+      Host: 221.133.21.135
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇻🇳 VN 01 - xiaohe
+  - 🇻🇳 VN 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇻🇳 VN 01 - xiaohe
+  - 🇻🇳 VN 02 - xiaohe
 rules:
 - MATCH,PROXIES
